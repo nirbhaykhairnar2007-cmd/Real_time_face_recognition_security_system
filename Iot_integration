@@ -1,0 +1,32 @@
+## 🌐 IoT Integration Using Firebase and ESP32
+
+FaceLock uses Firebase Realtime Database as a cloud communication layer between the Python face recognition application and the ESP32 microcontroller. When an authorized face is detected, Python sends an access request to Firebase. The ESP32 retrieves and validates the request over Wi-Fi and controls the solenoid door lock through a suitable driver circuit.
+
+### Connection Workflow
+1. Python captures and recognizes a face using the webcam.
+2. The authentication result is sent to Firebase.
+3. ESP32 connects to Wi-Fi and communicates with Firebase.
+4. The ESP32 processes the validated access command.
+5. The solenoid lock is activated for authorized access.
+6. The system returns the lock to its secure state and records the event.
+
+### Hardware Components
+- ESP32 development board
+- Solenoid door lock
+- Suitable relay module or MOSFET driver
+- External power supply
+- Flyback protection for the DC solenoid
+- Webcam and computer running Python
+
+### Setup Requirements
+- Configure a Firebase Realtime Database.
+- Set up authenticated database access and appropriate security rules.
+- Configure Wi-Fi credentials in the ESP32 firmware.
+- Configure the Firebase database URL and authentication in the Python application and ESP32 firmware.
+- Connect the solenoid using a correctly rated driver circuit.
+- Test authorized and unauthorized access before deployment.
+
+### Security
+Firebase credentials must be stored securely and must never be committed to a public repository. The ESP32 should validate access requests, reject stale commands, and maintain the defined secure lock state if communication fails.
+
+**Note:** The exact GPIO pin, database paths, authentication method, and circuit connections depend on the final hardware and firmware configuration.
