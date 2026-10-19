@@ -38,42 +38,6 @@ FaceLock is a smart security system that uses Artificial Intelligence (AI) and t
 6. **Cloud Integration:** Firebase stores user information and access logs for monitoring.
 7. **User Interface:** Tkinter provides an interface to interact with the system.
 
-## 📂 Project Structure
-```text
-FaceLock/
-├── dataset/          # Images of registered users
-├── main.py           # Main application
-├── requirements.txt  # Required Python libraries
-├── README.md         # Project documentation
-└── firebase_config/  # Firebase configuration (if required)
-```
-
-*Note: The file structure may vary depending on your implementation.*
-
-## 🚀 Installation and Setup
-
-1. Clone the repository:
-   ```bash
-   git clone <your-repository-url>
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd FaceLock
-   ```
-
-3. Install the required libraries:
-   ```bash
-   pip install opencv-python face_recognition firebase-admin
-   ```
-
-4. Configure Firebase credentials securely and connect the ESP32 hardware.
-
-5. Run the application:
-   ```bash
-   python main.py
-   ```
-
 ## 🔒 Applications
 - Smart home security
 - Office access control
